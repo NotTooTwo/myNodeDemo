@@ -47,7 +47,7 @@ var server = http.createServer(function (request, response) {
         }else{
             var indexPath = path.join(filepath, '/index.html');
             // 当前path下有无index.html
-            fs.stat(indexPath, function (err, stats) {
+            fs.stat(indexPath, function (err, stats) { 
                 if(!err && stats.isFile()){
                     response.writeHead(200);
                     fs.createReadStream(indexPath).pipe(response);
