@@ -1,21 +1,13 @@
 {
-  "name": "my_node_demo",
+  "name": "koa-url",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NotTooTwo/myNodeDemo.git"
-  },
-  "author": "butaier",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NotTooTwo/myNodeDemo/issues"
-  },
-  "homepage": "https://github.com/NotTooTwo/myNodeDemo#readme",
   "dependencies": {
     "express": "^4.16.2",
     "koa": "^2.4.1",
