@@ -10,12 +10,18 @@ var fn_index = async (ctx , next) => {
 var fn_signin = async (ctx , next) => {
 	var name = ctx.request.body.name ||'',
 		password = ctx.request.body.password || '';
-		console.log(name,password)
 	if(name === 'koa' && password === '12345'){
-		ctx.response.body = `<h1> welcome , ${name}</h1>`;
+		// ctx.response.body = `<h1> welcome , ${name}</h1>`;
+		ctx.render('sigin-ok.html',{
+			title:'Sign In Ok',
+			name:'Mr Node'
+		})
 	}else{
-		ctx.response.body = `<h1>login failed!</h1>
-			<p><a href="/">try again</a></p>`
+		// ctx.response.body = `<h1>login failed!</h1>
+			// <p><a href="/">try again</a></p>`
+		ctx.render('signin-failed.html',{
+			title:'Sign In Failed'
+		})
 	}
 }
 

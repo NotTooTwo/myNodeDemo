@@ -33,3 +33,8 @@ var env = createEnv('views', {
 
 var s = env.render('hello.html', { name: '小明' });
 console.log(s);
+
+console.log(env.render('testbase.html', {
+    header:'Hello',
+    body:'bla bla bla ... '
+}))
