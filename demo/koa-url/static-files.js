@@ -1,6 +1,6 @@
 const path = require('path')
 const mime = require('mime');
-const fs = require('fs');
+const fs = require('mz/fs');
 
 // url: 类似 '/static/'
 // dir: 类似 __dirname + '/static'
@@ -13,14 +13,11 @@ function staticFiles(url, dir) {
             let fp = path.join(dir, rpath.substring(url.length));
             // 判断文件是否存在:
             if (await fs.exists(fp)) {
-                console.log('dir:'+dir)
-                console.log('存在文件:'+fp)
                 // 查找文件的mime:
                 ctx.response.type = mime.lookup(rpath);
                 // 读取文件内容并赋值给response.body:
                 ctx.response.body = await fs.readFile(fp);
             } else {
-                console.log('文件不存在:'+fp)
                 // 文件不存在:
                 ctx.response.status = 404;
             }
