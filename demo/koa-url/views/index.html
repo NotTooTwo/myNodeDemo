@@ -1,4 +1,33 @@
 {% extends "base.html" %}
+{% block head %}
+<title>首页</title>
+<style type="text/css" media="screen">
+</style>
+{% endblock %}
 {% block body %}
-	<h1>{{ title }}</h1>
+<div class="container">
+    <form action="signin" method="post">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="exampleInputEmail1">账号：</label>
+            <input type="text" class="form-control" name='email'  placeholder="koa">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="exampleInputPassword1">密码：</label>
+            <input type="password" class="form-control" name="password" placeholder="123456">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">登陆</button>
+    </form>
+ </div> 
+ 
+</div>
+
 {% endblock %}

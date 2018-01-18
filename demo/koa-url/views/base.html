@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<link rel="stylesheet" href="/static/css/bootstrap/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/static/js/bootstrap/bootstrap.min.js" ></script>
+	{% block head %}
+	{% endblock %}
 </head>
 <body>
 	{% block header %}
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">
-	        <img alt="Brand" src="...">
+	      <a class="navbar-brand" href="/index">
+	      	首页
 	      </a>
 	    </div>
 	  </div>
@@ -21,12 +23,10 @@
 	{% endblock %}
 	{% block body %}
 	<div>
-		No body
 	</div>
 	{% endblock %}
 	{% block footer %}
 	<div>
-		No footer
 	</div>
 	{% endblock %}
 </body>
